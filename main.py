@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Entry for make.fun "The picture that tastes of one ingredient".
 
-The one ingredient is mozzarella. The committed entry.png beside this
-script is a single close-up of a grilled cheese sandwich being pulled
+The single ingredient is mozzarella. The committed entry.png beside
+this script is one close-up of a grilled cheese sandwich being pulled
 apart: long glossy strands of melted mozzarella stretched between two
-halves of golden toasted sourdough, steam rising. It was picked from
+halves of golden toasted sourdough, steam rising. It was chosen from
 six generated candidates scored against the brief's five criteria in
 order (see JUDGE-SCORECARD.md): it wins criterion 1 (one look and you
 can taste the mozzarella), criterion 2 (melt, gloss and steam, nothing
@@ -47,7 +47,7 @@ def main() -> None:
     # Fail loudly rather than write nothing if the picture is missing
     # or outside the gate: a silent empty /output scores 0 anyway.
     size = os.path.getsize(SOURCE_PATH)
-    if size == 0 or size > 1_048_576:
+    if not 0 < size <= 1_048_576:
         raise SystemExit(f"entry.png is {size} bytes, outside the 1 MiB gate")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     # Copy the committed image byte for byte: the entry is the picture.
