@@ -11,7 +11,7 @@ terasa rasa mozzarellanya), kriteria 2 (leleh, gloss, dan uap, tidak
 terasa plastik), dan kriteria 5 (cheese pull terbaca seketika di 300 px).
 
 Program ini menyalin gambar tersebut ke /output/entry.png. File-nya
-adalah JPEG 1024x1024 sebesar 211.757 byte, di dalam gate (PNG atau
+adalah JPEG 1024x1024 sebesar 215.768 byte, di dalam gate (PNG atau
 JPEG utuh, maksimal 1.048.576 byte dan 1024x1024 piksel).
 
 Hanya standard library, tanpa network, deterministik: setiap run

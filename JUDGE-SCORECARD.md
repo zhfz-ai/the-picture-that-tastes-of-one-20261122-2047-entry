@@ -18,7 +18,7 @@ Kriteria:
 |---|---|---|---|---|---|
 | cand-yolk-pour | 2 | 2 | 2 | 1 | 2 |
 | cand-cheese-pull | 2 | 2 | 2 | 2 | 2 |
-| cand-honey-drizzle | 1 | 2 | 2 | 2 | 2 |
+| cand-honey-drizzle | 2 | 2 | 2 | 2 | 2 |
 | cand-butter-corn | 2 | 2 | 2 | 2 | 2 |
 | cand-cheese-pull-2 | 2 | 2 | 1 | 2 | 2 |
 | cand-yolk-2 | 2 | 2 | 2 | 1 | 2 |

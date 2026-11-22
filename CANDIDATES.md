@@ -18,5 +18,5 @@ Semuanya extreme close-up, background gelap, tanpa teks, tanpa tangan.
    pecah, yolk mengalir ke piring. Ingredient: egg yolk.
 
 Gambar terpilih di-center-crop persegi, di-resize ke 1024x1024
-dan disimpan sebagai JPEG (211.757 byte) di `entry.png` di root repo;
+dan disimpan sebagai JPEG (215.768 byte) di `entry.png` di root repo;
 `main.py` menyalinnya ke `/output/entry.png`.
