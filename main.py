@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""Entry for make.fun "The picture that tastes of one ingredient".
+"""Entry untuk kompetisi make.fun "The picture that tastes of one ingredient".
 
-The single ingredient is mozzarella. The committed entry.png beside
-this script is one close-up of a grilled cheese sandwich being pulled
-apart: long glossy strands of melted mozzarella stretched between two
-halves of golden toasted sourdough, steam rising. It was chosen from
-six generated candidates scored against the brief's five criteria in
-order (see JUDGE-SCORECARD.md): it wins criterion 1 (one look and you
-can taste the mozzarella), criterion 2 (melt, gloss and steam, nothing
-plastic), and criterion 5 (the cheese pull reads instantly at 300 px).
+Ingredient tunggal: mozzarella. File entry.png di sebelah script ini
+adalah close-up grilled cheese sandwich yang ditarik terpisah — untaian
+mozzarella leleh yang glossy dan panjang merentang di antara dua belah
+sourdough panggang keemasan, dengan uap naik. Gambar ini dipilih dari
+enam kandidat yang dinilai menurut lima kriteria brief secara berurutan
+(lihat JUDGE-SCORECARD.md): menang di kriteria 1 (sekali lihat langsung
+terasa rasa mozzarellanya), kriteria 2 (leleh, gloss, dan uap, tidak
+terasa plastik), dan kriteria 5 (cheese pull terbaca seketika di 300 px).
 
-This program copies that image to /output/entry.png. The file is a
-1024x1024 JPEG of 211,757 bytes, inside the gate (whole PNG or JPEG,
-at most 1,048,576 bytes and 1024 by 1024 pixels).
+Program ini menyalin gambar tersebut ke /output/entry.png. File-nya
+adalah JPEG 1024x1024 sebesar 211.757 byte, di dalam gate (PNG atau
+JPEG utuh, maksimal 1.048.576 byte dan 1024x1024 piksel).
 
-Standard library only, no network, deterministic: every run writes
-exactly the same bytes.
+Hanya standard library, tanpa network, deterministik: setiap run
+menulis byte yang persis sama.
 """
 
 import os
@@ -27,16 +27,19 @@ SOURCE_PATH = os.path.join(HERE, "entry.png")
 OUTPUT_DIR = "/output"
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "entry.png")
 
-# Permissions requested after writing: file readable by everyone,
-# folder traversable by everyone. Applied best-effort only.
+# Izin yang diminta setelah penulisan: file bisa dibaca semua orang,
+# folder bisa ditelusuri semua orang. Diterapkan best-effort saja.
 FILE_MODE = 0o644
 DIR_MODE = 0o755
 
+# Batas atas ukuran gate: 1 MiB.
+MAX_BYTES = 1_048_576
+
 
 def best_effort_chmod(path: str, mode: int) -> None:
-    # The grading sandbox may pre-create /output under another owner,
-    # so permission tweaks are a courtesy, never a requirement: if
-    # chmod is refused, the written file still counts.
+    # Sandbox penilai bisa saja sudah membuat /output milik user lain,
+    # jadi penyesuaian izin hanya courtesy, bukan syarat: kalau chmod
+    # ditolak, file yang sudah tertulis tetap dihitung.
     try:
         os.chmod(path, mode)
     except OSError:
@@ -44,17 +47,17 @@ def best_effort_chmod(path: str, mode: int) -> None:
 
 
 def main() -> None:
-    # Fail loudly rather than write nothing if the picture is missing
-    # or outside the gate: a silent empty /output scores 0 anyway.
+    # Gagal dengan jelas daripada tidak menulis apa-apa kalau gambar
+    # hilang atau di luar gate: /output kosong yang senyap toh skornya 0.
     size = os.path.getsize(SOURCE_PATH)
-    if not 0 < size <= 1_048_576:
+    if not 0 < size <= MAX_BYTES:
         raise SystemExit(f"entry.png is {size} bytes, outside the 1 MiB gate")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    # Copy the committed image byte for byte: the entry is the picture.
+    # Salin gambar yang sudah di-commit byte demi byte: entry-nya adalah gambar itu sendiri.
     shutil.copyfile(SOURCE_PATH, OUTPUT_PATH)
-    # The grader collects outputs as another user: leave the file
-    # readable by everyone (0644) and the folder traversable (0755),
-    # best-effort so a foreign-owned /output cannot fail the run.
+    # Penilai mengambil output sebagai user lain: biarkan file bisa dibaca
+    # semua orang (0644) dan folder bisa ditelusuri (0755), best-effort
+    # supaya /output milik orang lain tidak menggagalkan run.
     best_effort_chmod(OUTPUT_PATH, FILE_MODE)
     best_effort_chmod(OUTPUT_DIR, DIR_MODE)
 

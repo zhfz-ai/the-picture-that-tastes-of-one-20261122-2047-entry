@@ -1,18 +1,18 @@
 # Judge scorecard — The picture that tastes of one ingredient
 
-Scored 0-2 per criterion, in the brief's order. The judge walks the
-criteria in order and stops at the first difference, so criterion 1
-and 2 decide most pairings; totals are not averaged.
+Dinilai 0-2 per kriteria, mengikuti urutan brief. Juri menelusuri
+kriteria secara berurutan dan berhenti di perbedaan pertama, jadi kriteria 1
+dan 2 menentukan sebagian besar pairing; total tidak dirata-rata.
 
-Criteria:
-1. It makes you hungry: one look and you can taste the ingredient.
-2. The ingredient itself: fresh, real, well made — steam, gloss,
-   crunch or melt, not plastic or muddy.
-3. Styling and light: plating, colour, light, composition lead the
-   eye to the food.
-4. Craft: clean in its chosen style, no smears, artefacts, garbled
-   text, or food broken by accident.
-5. It reads small: at about 300 pixels the dish is still clear.
+Kriteria:
+1. Bikin lapar: sekali lihat langsung terasa rasa ingredient-nya.
+2. Ingredient itu sendiri: segar, nyata, dibuat dengan baik — uap, gloss,
+   renyah atau leleh, bukan plastik atau keruh.
+3. Styling dan cahaya: plating, warna, cahaya, komposisi mengarahkan
+   mata ke makanan.
+4. Craft: bersih dalam gaya pilihannya, tanpa smear, artefak, teks
+   kacau, atau makanan rusak tanpa sengaja.
+5. Terbaca kecil: di sekitar 300 piksel hidangannya masih jelas.
 
 | Candidate | 1 Hungry | 2 Ingredient | 3 Styling | 4 Craft | 5 Reads 300px |
 |---|---|---|---|---|---|
@@ -23,21 +23,21 @@ Criteria:
 | cand-cheese-pull-2 | 2 | 2 | 1 | 2 | 2 |
 | cand-yolk-2 | 2 | 2 | 2 | 1 | 2 |
 
-Notes:
-- cand-yolk-pour loses criterion 4: the yolk reads as two stacked
-  masses, food broken by accident.
-- cand-yolk-2 loses criterion 4 narrowly: the broken yolk's skin
-  folds oddly at the top.
-- cand-honey-drizzle loses criterion 1: beautiful, but sweet-pretty
-  rather than mouth-watering; the honeycomb edge reads waxy.
-- cand-butter-corn is strong but built on two elements (corn +
-  butter); the brief is one ingredient.
-- cand-cheese-pull-2 loses criterion 3: the bright window background
-  competes with the food and the pull is thinner.
+Catatan:
+- cand-yolk-pour kalah di kriteria 4: yolk terbaca sebagai dua massa
+  bertumpuk, makanan rusak tanpa sengaja.
+- cand-yolk-2 kalah tipis di kriteria 4: kulit yolk yang pecah
+  melipat aneh di bagian atas.
+- cand-honey-drizzle kalah di kriteria 1: cantik, tapi manis-cantik
+  daripada bikin ngiler; tepi honeycomb terbaca seperti lilin.
+- cand-butter-corn kuat tapi dibangun di atas dua elemen (jagung +
+  butter); brief-nya satu ingredient.
+- cand-cheese-pull-2 kalah di kriteria 3: background jendela yang terang
+  bersaing dengan makanan dan pull-nya lebih tipis.
 
-Pick: **cand-cheese-pull** — the only candidate with no criterion
-below 2. Head-to-head it beats yolk-2 on criterion 4 (cleaner craft)
-and criterion 5 (the vertical strands read instantly at 300 px,
-verified on a 300x300 downscale), and ties or wins 1-3 against the
-rest. Entry title: "Grilled cheese pulled apart: mozzarella stretched
+Pilihan: **cand-cheese-pull** — satu-satunya kandidat tanpa kriteria
+di bawah 2. Head-to-head mengalahkan yolk-2 di kriteria 4 (craft lebih bersih)
+dan kriteria 5 (untaian vertikal terbaca seketika di 300 px,
+terverifikasi di downscale 300x300), dan seri atau menang 1-3 melawan
+sisanya. Judul entry: "Grilled cheese pulled apart: mozzarella stretched
 to breaking point".
